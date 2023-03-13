@@ -184,7 +184,7 @@ taxonomy <- function(db = "NCBI", synonyms = FALSE){
     stop("Only the NCBI taxonomy database is available in this version\n")
   }
   tmp <- tempdir()
-  fn <- "ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz"
+  fn <- "ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz"
   download.file(fn, destfile = paste0(tmp, "/tmp.tar.gz"))
   message("Extracting data\n")
   test <- untar(tarfile = paste0(tmp, "/tmp.tar.gz"), exdir = tmp)
